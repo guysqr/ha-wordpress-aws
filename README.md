@@ -77,7 +77,9 @@ To build the application bundle you can deploy to EB, just run
 zip --symlinks -r wordpress_ha_on_aws.zip . --exclude=*.git* --exclude=*.md --exclude=*cf-templates* --exclude=.DS_Store 
 ```
 
-This will write a zip archive you can upload directly via the EB console. Note that it retains the symlink - this is necessary to map the EFS to the location EB will run your app from.
+This will write a zip archive you can upload directly via the EB console. Note that it includes the symlink in the archive - this is necessary to map the EFS to the location EB will run your app from.
+
+**NOTE:** Windows Zip will probably not work to achieve this step. Please use the [Linux subsystem for Windows](https://docs.microsoft.com/en-us/windows/wsl/install-win10). If you see an error in Elastic Beanstalk that says "Following services are not running: proxy", it's because your zip file is missing the symlink, which means the app server won't be able to find the app code.
 
 ### Configure the Database
 
