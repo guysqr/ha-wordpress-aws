@@ -107,61 +107,72 @@ Parameters:
       application is compatible with the selected platform.
     ConstraintDescription: Invalid runtime environment value
     AllowedValues: 
+      -  64bit Amazon Linux 2018.03 v4.13.1 running Node.js
       -  64bit Amazon Linux 2018.03 v4.10.2 running Node.js
-      -  64bit Amazon Linux 2018.03 v2.8.15 running PHP 5.4
-      -  64bit Amazon Linux 2018.03 v2.8.15 running PHP 5.5
-      -  64bit Amazon Linux 2018.03 v2.8.15 running PHP 5.6
-      -  64bit Amazon Linux 2018.03 v2.8.15 running PHP 7.0
-      -  64bit Amazon Linux 2018.03 v2.8.15 running PHP 7.1
+      -  64bit Amazon Linux 2018.03 v2.9.3 running PHP 5.4
+      -  64bit Amazon Linux 2018.03 v2.9.3 running PHP 5.5
+      -  64bit Amazon Linux 2018.03 v2.9.3 running PHP 5.6
+      -  64bit Amazon Linux 2018.03 v2.9.3 running PHP 7.0
+      -  64bit Amazon Linux 2018.03 v2.9.3 running PHP 7.1
+      -  64bit Amazon Linux 2018.03 v2.9.3 running PHP 7.2
+      -  64bit Amazon Linux 2018.03 v2.9.3 running PHP 7.3
+      -  64bit Amazon Linux 2018.03 v2.9.1 running PHP 7.1
       -  64bit Amazon Linux 2018.03 v2.8.15 running PHP 7.2
       -  64bit Amazon Linux 2018.03 v2.7.1 running PHP 7.1
-      -  64bit Amazon Linux 2018.03 v2.9.2 running Python 3.6
-      -  64bit Amazon Linux 2018.03 v2.9.2 running Python 3.4
-      -  64bit Amazon Linux 2018.03 v2.9.2 running Python
-      -  64bit Amazon Linux 2018.03 v2.9.2 running Python 2.7
-      -  64bit Amazon Linux 2018.03 v2.10.2 running Ruby 2.5 (Passenger Standalone)
-      -  64bit Amazon Linux 2018.03 v2.10.2 running Ruby 2.4 (Passenger Standalone)
-      -  64bit Amazon Linux 2018.03 v2.10.2 running Ruby 2.3 (Passenger Standalone)
-      -  64bit Amazon Linux 2018.03 v2.10.2 running Ruby 2.2 (Passenger Standalone)
-      -  64bit Amazon Linux 2018.03 v2.10.2 running Ruby 2.1 (Passenger Standalone)
-      -  64bit Amazon Linux 2018.03 v2.10.2 running Ruby 2.0 (Passenger Standalone)
-      -  64bit Amazon Linux 2018.03 v2.10.2 running Ruby 1.9.3
-      -  64bit Amazon Linux 2018.03 v2.10.2 running Ruby 2.5 (Puma)
-      -  64bit Amazon Linux 2018.03 v2.10.2 running Ruby 2.4 (Puma)
-      -  64bit Amazon Linux 2018.03 v2.10.2 running Ruby 2.3 (Puma)
-      -  64bit Amazon Linux 2018.03 v2.10.2 running Ruby 2.2 (Puma)
-      -  64bit Amazon Linux 2018.03 v2.10.2 running Ruby 2.1 (Puma)
-      -  64bit Amazon Linux 2018.03 v2.10.2 running Ruby 2.0 (Puma)
-      -  64bit Amazon Linux 2018.03 v2.10.1 running Ruby 2.6 (Passenger Standalone)
-      -  64bit Amazon Linux 2018.03 v2.10.1 running Ruby 2.6 (Puma)
-      -  64bit Amazon Linux 2018.03 v3.2.2 running Tomcat 8.5 Java 8
-      -  64bit Amazon Linux 2018.03 v3.2.2 running Tomcat 8 Java 8
-      -  64bit Amazon Linux 2018.03 v3.2.2 running Tomcat 7 Java 7
-      -  64bit Amazon Linux 2018.03 v3.2.2 running Tomcat 7 Java 6
-      -  64bit Windows Server Core 2016 v2.2.2 running IIS 10.0
-      -  64bit Windows Server 2016 v2.2.2 running IIS 10.0
-      -  64bit Windows Server Core 2012 R2 v2.2.2 running IIS 8.5
-      -  64bit Windows Server 2012 R2 v2.2.2 running IIS 8.5
+      -  64bit Amazon Linux 2018.03 v2.9.6 running Python 3.6
+      -  64bit Amazon Linux 2018.03 v2.9.6 running Python 3.4
+      -  64bit Amazon Linux 2018.03 v2.9.6 running Python
+      -  64bit Amazon Linux 2018.03 v2.9.6 running Python 2.7
+      -  64bit Amazon Linux 2018.03 v2.11.3 running Ruby 2.6 (Puma)
+      -  64bit Amazon Linux 2018.03 v2.11.3 running Ruby 2.5 (Puma)
+      -  64bit Amazon Linux 2018.03 v2.11.3 running Ruby 2.4 (Puma)
+      -  64bit Amazon Linux 2018.03 v2.11.3 running Ruby 2.3 (Puma)
+      -  64bit Amazon Linux 2018.03 v2.11.3 running Ruby 2.2 (Puma)
+      -  64bit Amazon Linux 2018.03 v2.11.3 running Ruby 2.1 (Puma)
+      -  64bit Amazon Linux 2018.03 v2.11.3 running Ruby 2.0 (Puma)
+      -  64bit Amazon Linux 2018.03 v2.11.3 running Ruby 2.6 (Passenger Standalone)
+      -  64bit Amazon Linux 2018.03 v2.11.3 running Ruby 2.5 (Passenger Standalone)
+      -  64bit Amazon Linux 2018.03 v2.11.3 running Ruby 2.4 (Passenger Standalone)
+      -  64bit Amazon Linux 2018.03 v2.11.3 running Ruby 2.3 (Passenger Standalone)
+      -  64bit Amazon Linux 2018.03 v2.11.3 running Ruby 2.2 (Passenger Standalone)
+      -  64bit Amazon Linux 2018.03 v2.11.3 running Ruby 2.1 (Passenger Standalone)
+      -  64bit Amazon Linux 2018.03 v2.11.3 running Ruby 2.0 (Passenger Standalone)
+      -  64bit Amazon Linux 2018.03 v2.11.3 running Ruby 1.9.3
+      -  64bit Amazon Linux 2018.03 v3.3.3 running Tomcat 8.5 Java 8
+      -  64bit Amazon Linux 2018.03 v3.3.3 running Tomcat 8 Java 8
+      -  64bit Amazon Linux 2018.03 v3.3.3 running Tomcat 7 Java 7
+      -  64bit Amazon Linux 2018.03 v3.3.3 running Tomcat 7 Java 6
+      -  64bit Windows Server Core 2019 v2.5.1 running IIS 10.0
+      -  64bit Windows Server 2019 v2.5.1 running IIS 10.0
+      -  64bit Windows Server Core 2016 v2.5.1 running IIS 10.0
+      -  64bit Windows Server 2016 v2.5.1 running IIS 10.0
+      -  64bit Windows Server Core 2012 R2 v2.5.1 running IIS 8.5
+      -  64bit Windows Server 2012 R2 v2.5.1 running IIS 8.5
+      -  64bit Windows Server Core 2016 v2.5.0 running IIS 10.0
+      -  64bit Windows Server 2016 v2.5.0 running IIS 10.0
+      -  64bit Windows Server Core 2019 v2.4.0 running IIS 10.0
+      -  64bit Windows Server 2019 v2.4.0 running IIS 10.0
       -  64bit Windows Server Core 2016 v1.2.0 running IIS 10.0
       -  64bit Windows Server 2016 v1.2.0 running IIS 10.0
       -  64bit Windows Server Core 2012 R2 v1.2.0 running IIS 8.5
       -  64bit Windows Server 2012 R2 v1.2.0 running IIS 8.5
       -  64bit Windows Server 2012 v1.2.0 running IIS 8
-      -  64bit Windows Server 2008 R2 v1.2.0 running IIS 7.5
       -  64bit Windows Server Core 2012 R2 running IIS 8.5
       -  64bit Windows Server 2012 R2 running IIS 8.5
       -  64bit Windows Server 2012 running IIS 8
-      -  64bit Windows Server 2008 R2 running IIS 7.5
-      -  64bit Amazon Linux 2018.03 v2.12.17 running Docker 18.06.1-ce
-      -  64bit Amazon Linux 2018.03 v2.16.0 running Multi-container Docker 18.06.1-ce (Generic)
-      -  64bit Debian jessie v2.12.17 running Go 1.4 (Preconfigured - Docker)
-      -  64bit Debian jessie v2.12.17 running Go 1.3 (Preconfigured - Docker)
-      -  64bit Debian jessie v2.12.17 running Python 3.4 (Preconfigured - Docker)
-      -  64bit Amazon Linux 2018.03 v2.9.2 running Java 8
-      -  64bit Amazon Linux 2018.03 v2.9.2 running Java 7
-      -  64bit Amazon Linux 2018.03 v2.13.0 running Go 1.13
-      -  64bit Amazon Linux 2018.03 v2.6.15 running Packer 1.0.3
-      -  64bit Amazon Linux 2018.03 v2.12.17 running GlassFish 5.0 Java 8 (Preconfigured - Docker)
+      -  64bit Amazon Linux 2018.03 v2.14.2 running Docker 18.09.9-ce
+      -  64bit Amazon Linux 2018.03 v2.19.1 running Multi-container Docker 18.09.9-ce (Generic)
+      -  64bit Debian jessie v2.14.2 running Go 1.4 (Preconfigured - Docker)
+      -  64bit Debian jessie v2.14.2 running Go 1.3 (Preconfigured - Docker)
+      -  64bit Debian jessie v2.14.2 running Python 3.4 (Preconfigured - Docker)
+      -  64bit Amazon Linux 2 v0.1.1 running Corretto 11 (BETA)
+      -  64bit Amazon Linux 2 v0.1.1 running Corretto 8 (BETA)
+      -  64bit Amazon Linux 2 v0.1.0 running Python 3.7 (BETA)
+      -  64bit Amazon Linux 2018.03 v2.10.3 running Java 8
+      -  64bit Amazon Linux 2018.03 v2.10.3 running Java 7
+      -  64bit Amazon Linux 2018.03 v2.14.3 running Go 1.13.8
+      -  64bit Amazon Linux 2018.03 v2.6.19 running Packer 1.0.3
+      -  64bit Amazon Linux 2018.03 v2.14.2 running GlassFish 5.0 Java 8 (Preconfigured - Docker)
     Type: String
   InstanceType:
     ConstraintDescription: must be a valid instance type.
@@ -314,6 +325,7 @@ Resources:
         VpcId:
           Ref: VPCId
   SSHSecurityGroup:
+    # Condition: DoEnableSSHAccess
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: !Sub 'Enable SSH access.'
@@ -404,9 +416,9 @@ Resources:
         - Namespace: aws:elasticbeanstalk:healthreporting:system
           OptionName: SystemType
           Value: enhanced
-        - Namespace: aws:elasticbeanstalk:environment:process:default
-          OptionName: HealthCheckPath
-          Value: /
+        # - Namespace: aws:elasticbeanstalk:environment:process:default
+        #   OptionName: HealthCheckPath
+        #   Value: /
         - Namespace: aws:ec2:vpc
           OptionName: VPCId
           Value: 

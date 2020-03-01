@@ -1,0 +1,4 @@
+.env
+wordpress-eb.code-workspace
+efs_mount_dir
+beanstalk_application.zip

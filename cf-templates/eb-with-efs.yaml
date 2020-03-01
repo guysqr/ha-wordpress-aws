@@ -256,7 +256,6 @@ Resources:
         VpcId:
           Ref: VPCId
   SSHSecurityGroup:
-    Condition: DoEnableSSHAccess
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: !Sub 'Enable SSH access.'
@@ -347,9 +346,6 @@ Resources:
         - Namespace: aws:elasticbeanstalk:healthreporting:system
           OptionName: SystemType
           Value: enhanced
-        - Namespace: aws:elasticbeanstalk:environment:process:default
-          OptionName: HealthCheckPath
-          Value: /
         - Namespace: aws:ec2:vpc
           OptionName: VPCId
           Value: 
