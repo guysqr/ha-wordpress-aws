@@ -318,28 +318,28 @@ Resources:
           Value: aws-elasticbeanstalk-ec2-role
         - Namespace: aws:autoscaling:trigger
           OptionName: MeasureName
-          Value: UnhealthyHostCount
+          Value: CPUUtilization
         - Namespace: aws:autoscaling:trigger
           OptionName: Statistic
-          Value: Minimum
+          Value: Average
         - Namespace: aws:autoscaling:trigger
           OptionName: LowerThreshold
-          Value: 0
+          Value: 20
         - Namespace: aws:autoscaling:trigger
           OptionName: LowerBreachScaleIncrement
-          Value: 0
+          Value: -1
         - Namespace: aws:autoscaling:trigger
           OptionName: UpperThreshold
-          Value: 1
+          Value: 60
         - Namespace: aws:autoscaling:trigger
           OptionName: UpperBreachScaleIncrement
           Value: 1
         - Namespace: aws:autoscaling:trigger
           OptionName: Unit
-          Value: Count/Second
+          Value: Percent
         - Namespace: aws:autoscaling:trigger
           OptionName: BreachDuration
-          Value: 2
+          Value: 3
         - Namespace: aws:autoscaling:trigger
           OptionName: Period
           Value: 3
