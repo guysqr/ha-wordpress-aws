@@ -18,7 +18,7 @@ If you want to guarantee burst credits don't ever bring your site to a crawl, yo
 
 ## Setting up the AWS infrastructure
 
-Here's what we're going to build (well, almost - I'm expecting you already have the database set up. If not, you'll have to do that separately...)
+Here's what we're going to build (well, almost - I'm expecting you already have the database set up. If not, you'll have to do that separately...note also you will need to have created an empty database for WordPress to write to...)
 
 ![What we'll build](diagram.png "AWS architecture")
 
@@ -51,7 +51,7 @@ The EB deployment CF template has parameters you need to set, including names fo
 
 There is an option to specify an ACM certification arn - if you provide this the load balancer will be configured to listen on HTTPS and the certificate you specify will be used to encrypt the connection.
 
-You will also need to specify a key pair name. This will only be used if you allow SSH access on the instances.
+You will also need to specify a key pair name. This will only be used if you allow SSH access on the instances (which in an ideal world, you won't).
 
 #### Rebuilding the template
 
@@ -74,7 +74,7 @@ If the CloudFormation build process gets to the point where it spawns the Elasti
 To build the application bundle you can deploy to EB, just run
 
 ```
-zip --symlinks -r wordpress_ha_on_aws.zip . --exclude=*.git* --exclude=*.md --exclude=*cf-templates* --exclude=.DS_Store 
+zip --symlinks -r wordpress_ha_on_aws.zip . --exclude='*.git*' --exclude='*.md' --exclude='*cf-templates*' --exclude=.DS_Store 
 ```
 
 This will write a zip archive you can upload directly via the EB console. Note that it includes the symlink in the archive - this is necessary to map the EFS to the location EB will run your app from.
@@ -107,6 +107,10 @@ As every instance is using the same filesystem, any instance you end up on shoul
 You will not be able to access any of the servers directly through FTP or SFTP.
 
 If you need to access the filesystem on the EFS, you can install a "file manager" plugin in WordPress, should that be deemed necessary. 
+
+### Rebuilding the EB Environment
+
+Note if you rebuild the EB environment your endpoint URL will change and this will make your WP site break, unless you have already configured it to use something other than the default EB hostname.
 
 ### Asynchronous activities in WordPress (eg installs, uploads, updates)
 
