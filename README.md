@@ -110,17 +110,21 @@ If you need to access the filesystem on the EFS, you can install a "file manager
 
 ### Rebuilding the EB Environment
 
-Note if you rebuild the EB environment your endpoint URL will change and this will make your WP site break, unless you have already configured it to use something other than the default EB hostname.
+Note if you rebuild the EB environment your endpoint URL will change and this will make your WP site break, unless you have already configured it to use something other than the default EB hostname. If this happens you should update the BASE_URL environment variable to the updated value. If content on the site is using the old URL you will need to log into the wp-admin console and install a Search and Replace plugin to fix that, or modify it via the db directly. Google is your friend.
 
 ### Asynchronous activities in WordPress (eg installs, uploads, updates)
 
 It may be beneficial to configure sticky sessions on the load balancer (you can do this via the EB console), if asynchronous transactions (particularly in the admin console) appear to fail. This could happen if the back end is being polled for an update about a task, eg an update or install, and there is more than one instance running in the load balanced pool. Often the transaction will have succeeded, but will report a failure as the polling hit a different instance to the one doing the task.
 
+### About auto-scaling and performance
+
+You may need to adjust the auto-scaling settings to suit your needs, as well as ensure that your database is sufficiently well resourced to serve the traffic your site attracts. I have tested this architecture with this AWS Load Testing tool that you can also spin up in your own account - https://aws.amazon.com/solutions/distributed-load-testing-on-aws/. Note that if you see a lot of 5XX errors when you put load on your environment it probably indicates that your instances and/or db are insufficiently resourced to meet that demand (the load balancer is not getting a timely response from an EC2 instance so the request is timing out). Try scaling up your EC2 instance type, start with a minimum of 2 instances, and check your database metrics for evidence of high CPU load.
+
 ## Contributing
 
-If you find anything here that needs fixing, or if you have improvements, please fork, fix and submit a pull request. Thanks.
+If you find anything here that needs fixing, or if you have improvements, please fork, fix and submit a pull request, or drop me a line if you have any questions. Thanks.
 
 ## Conclusion
 
-The above should have you up and running with a WordPress instance that you can easily scale horizontally using the simple auto-scaling tools in Elastic Beanstalk's console.
+The above should have you up and running with a WordPress instance that you can easily scale horizontally using the simple auto-scaling tools in Elastic Beanstalk's console, yet still manage via the WP admin console.
 
