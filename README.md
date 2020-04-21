@@ -8,6 +8,11 @@ The following caching strategies are implemented on the instances to minimise th
 * FSCached - caches the EFS files on the local EBS volume
 * WP Super Cache - WordPress plugin that stores rendered pages in a directory on the instance-attached EBS volume
 
+In addition, 
+
+* a CDN should be used to cache data at the AWS network edge for busy sites
+* static content should be offloaded to S3 via a WordPress plugin
+
 ### About EFS burst credits
 
 You should set up a CloudWatch alarm for the EFS Burst Credit metric to ensure you're warned if it ever drops unexpectedly, or below a level that can be recovered within the SLA period. 
